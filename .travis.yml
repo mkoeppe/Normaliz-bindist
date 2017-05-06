@@ -23,7 +23,6 @@ script:
     ## Just test whether the programs can be executed.
     - bin/normaliz --version
     - bin/Qnormaliz --version
-    - bin/nmzIntegrate --version
     ## The distribution also contains libraries and header files;
     ## we do not attempt to test that they work.
 
