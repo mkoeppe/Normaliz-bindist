@@ -27,8 +27,8 @@ script:
     - git clone https://github.com/Normaliz/Normaliz.git
     - export NORMALIZ="`pwd`/bin/normaliz"
     - export NMZ_TEST_TARGETS="all testInt"
-    - (cd Normaliz/test && make -j3 -f Normaliz/test/Makefile.classic $NMZ_TEST_TARGETS NORMALIZ="$NORMALIZ")
+    - (cd Normaliz/test && make -j3 -f Makefile.classic $NMZ_TEST_TARGETS NORMALIZ="$NORMALIZ")
     - export QNORMALIZ="`pwd`/bin/Qnormaliz"
-    - (cd Normaliz/Qtest && make -j3 -f Normaliz/Qtest/Makefile.classic all QNORMALIZ="$QNORMALIZ")
+    - (cd Normaliz/Qtest && make -j3 -f Makefile.classic all QNORMALIZ="$QNORMALIZ")
     ## The distribution also contains libraries and header files;
     ## we do not attempt to test that they work.
