@@ -26,6 +26,8 @@ script:
     ## First test whether the programs can be executed.
     - bin/normaliz --version
     - bin/Qnormaliz --version
+    ## Show shared library dependencies
+    - otool -L bin/*
     ## Now test against the test suite, including nmzintegrate
     - git clone https://github.com/Normaliz/Normaliz.git
     - export NORMALIZ="`pwd`/bin/normaliz"
