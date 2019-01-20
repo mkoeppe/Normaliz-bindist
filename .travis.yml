@@ -27,7 +27,7 @@ script:
     - bin/normaliz --version
     ## Show shared library dependencies
     - otool -L bin/*
-    ## Now test against the test suite, including nmzintegrate
+    ## Now test against the test suite, including integration and algebraic polyhedra
     - git clone https://github.com/Normaliz/Normaliz.git
     - export NORMALIZ="`pwd`/bin/normaliz"
     - export NMZ_TEST_TARGETS="total"
