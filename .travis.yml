@@ -30,7 +30,7 @@ script:
     ## Now test against the test suite, including nmzintegrate
     - git clone https://github.com/Normaliz/Normaliz.git
     - export NORMALIZ="`pwd`/bin/normaliz"
-    - export NMZ_TEST_TARGETS="all testInt"
+    - export NMZ_TEST_TARGETS="total"
     - (cd Normaliz/test && make -j3 -k -f Makefile.classic $NMZ_TEST_TARGETS NORMALIZ="$NORMALIZ")
     ## The distribution also contains libraries and header files;
     ## we do not attempt to test that they work.
