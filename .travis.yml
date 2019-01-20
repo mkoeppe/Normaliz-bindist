@@ -25,7 +25,6 @@ install:
 script:
     ## First test whether the programs can be executed.
     - bin/normaliz --version
-    - bin/Qnormaliz --version
     ## Show shared library dependencies
     - otool -L bin/*
     ## Now test against the test suite, including nmzintegrate
@@ -33,7 +32,5 @@ script:
     - export NORMALIZ="`pwd`/bin/normaliz"
     - export NMZ_TEST_TARGETS="all testInt"
     - (cd Normaliz/test && make -j3 -k -f Makefile.classic $NMZ_TEST_TARGETS NORMALIZ="$NORMALIZ")
-    - export QNORMALIZ="`pwd`/bin/Qnormaliz"
-    - (cd Normaliz/Qtest && make -j3 -k -f Makefile.classic all QNORMALIZ="$QNORMALIZ")
     ## The distribution also contains libraries and header files;
     ## we do not attempt to test that they work.
